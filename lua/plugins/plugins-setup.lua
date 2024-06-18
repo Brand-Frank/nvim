@@ -39,7 +39,7 @@ return require('packer').startup(function(use)
   use "nvim-treesitter/nvim-treesitter" -- 语法高亮
   use "p00f/nvim-ts-rainbow" -- 配合treesitter，不同括号颜色区分
   use {
-    "williamboman/mason.nvim",
+    "williamboman/mason.nvim",	-- 轻松安装和管理LSP服务器、DAP服务器、linters和formatters。
     "williamboman/mason-lspconfig.nvim",  -- 这个相当于mason.nvim和lspconfig的桥梁
     "neovim/nvim-lspconfig"
   }
