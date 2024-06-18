@@ -80,15 +80,21 @@ For more modfication can be note.
 
 1. ### 运行`:help`或`:h xxx-xxx`等指令时，会出现一堆报错`treesitter/highlighter:Error executing lua，query:invalid node type at position 7 for language...`
 
-![image-20240618154021699](C:\Users\inTree\AppData\Local\nvim\readme.assets\image-20240618154021699.png)
+![image-20240618154021699](readme.assets\image-20240618154021699.png)
 
-- 参考解决方法：[query: invalid node type at position · Issue #3934 · nvim-treesitter/nvim-treesitter (github.com)](https://github.com/nvim-treesitter/nvim-treesitter/issues/3934)
+- 参考解决方法：
 
-![image-20240618154229409](C:\Users\inTree\AppData\Local\nvim\readme.assets\image-20240618154229409.png)
+1. [query: invalid node type at position · Issue #3934 · nvim-treesitter/nvim-treesitter (github.com)](https://github.com/nvim-treesitter/nvim-treesitter/issues/3934)
+
+2. [:help error: treesitter/query.lua:219: query: invalid node type at position 14 for language help · Issue #3680 · LunarVim/LunarVim (github.com)](https://github.com/LunarVim/LunarVim/issues/3680)
+
+
+
+![image-20240618154229409](readme.assets\image-20240618154229409.png)
 
 即**删除neovim的内置解析器（`D:\Development\Neovim\lib\nvim\parser`）**，之后执行命令后不会再报错。
 
-![image-20240618154443206](C:\Users\inTree\AppData\Local\nvim\readme.assets\image-20240618154443206.png)
+![image-20240618154443206](readme.assets\image-20240618154443206.png)
 
 **另一种思路：**<u>系统内置解析器</u>和<u>tree-sitter的同名解析器</u>冲突，两者之间有冲突的解析器选择只留其一，这里我是删了系统内置解析器，但是为了预防万一，还是**备份了系统内置的解析器**，以防tree-sitter项目停更。
 
