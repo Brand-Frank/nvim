@@ -62,6 +62,29 @@ return require('packer').startup(function(use)
     requires = { {'nvim-lua/plenary.nvim'} }
   }
 
+-- ==================================
+  -- Debugger
+  use {
+    {
+      'mfussenegger/nvim-dap',
+      setup = [[require('config.dap_setup')]],
+      config = [[require('config.dap')]],
+      requires = 'jbyuki/one-small-step-for-vimkind',
+      wants = 'one-small-step-for-vimkind',
+      cmd = { 'BreakpointToggle', 'Debug', 'DapREPL' },
+    },
+    {
+      'rcarriga/nvim-dap-ui',
+      requires = 'nvim-dap',
+      wants = 'nvim-dap',
+      after = 'nvim-dap',
+      config = function()
+        require('dapui').setup()
+      end,
+    },
+  }
+-- ==================================
+
   if packer_bootstrap then
     require('packer').sync()
   end
