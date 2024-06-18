@@ -83,6 +83,9 @@ return require('packer').startup(function(use)
       end,
     },
   }
+  
+--   Linter静态代码分析工具
+  use 'mfussenegger/nvim-lint'
 -- ==================================
 
   if packer_bootstrap then
