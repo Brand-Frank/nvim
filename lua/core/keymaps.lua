@@ -31,6 +31,9 @@ keymap.set("n", "<C-Right>", ":tabnext<CR>")	-- Ctrl+右方向键		切换到下�
 -- nvim-tree
 keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>")
 
+-- Dashboard
+keymap.set("n", "<leader>d", ":Dashboard<CR>")
+
 -- nvim-dap & nvim-dap-ui
 keymap.set('n', '<F5>', function() require('dap').continue() end)
 keymap.set('n', '<F10>', function() require('dap').step_over() end)

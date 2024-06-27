@@ -66,83 +66,13 @@ return require('packer').startup(function(use)
   -- Debugger
   use 'mfussenegger/nvim-dap'
   use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap", "nvim-neotest/nvim-nio"} }
-  -- use {
-  --   {
-  --     'mfussenegger/nvim-dap',
-  --     setup = [[require('config.dap_setup')]],
-  --     config = [[require('config.dap')]],
-  --     requires = 'jbyuki/one-small-step-for-vimkind',
-  --     wants = 'one-small-step-for-vimkind',
-  --     cmd = { 'BreakpointToggle', 'Debug', 'DapREPL' },
-  --   },
-  --   {
-  --     'rcarriga/nvim-dap-ui',
-  --     requires = 'nvim-dap',
-  --     wants = 'nvim-dap',
-  --     after = 'nvim-dap',
-  --     config = function()
-  --       require('dapui').setup()
-  --     end,
-  --   },
-  -- }
-  --
 
---   Linter静态代码分析工具
+  -- Linter静态代码分析工具
   use 'mfussenegger/nvim-lint'
 
--- dashboard-nvim -- neovim的Fancy和Blazing快速启动屏幕插件
+  -- dashboard-nvim
   use {
-    'nvimdev/dashboard-nvim',
-    event = 'VimEnter',
-    config = function()
-      require('dashboard').setup {
-        -- configurations
-
-        -- theme = 'hyper',
-        -- config = {
-          -- header --type is table def
-          --   shortcut = {
-          --   -- action can be a function type
-          --   { desc = string, group = 'highlight group', key = 'shortcut key', action = 'action when you press key' },
-          -- },
-          -- packages = { enable = true }, -- show how many plugins neovim loaded
-          -- -- limit how many projects list, action when you press key or enter it will run this action.
-          -- -- action can be a functino type, e.g.
-          -- -- action = func(path) vim.cmd('Telescope find_files cwd=' .. path) end
-          -- project = { enable = true, limit = 8, icon = 'your icon', label = '', action = 'Telescope find_files cwd=' },
-          -- mru = { limit = 10, icon = 'your icon', label = '', cwd_only = false },
-          -- footer = {}, -- footer
-          -- },
-
-        theme = 'doom',
-        config = {
-          header = {"this is dashboard."},
-          center = {
-            {
-              icon = ' ',
-              icon_hl = 'Title',
-              desc = 'Find File',
-              desc_hl = 'String',
-              key = 'b',
-              keymap = 'SPC f f',
-              key_hl = 'Number',
-              key_format = ' %s', -- `%s` will be substituted with value of `key`
-              action = 'lua print(2)',
-            },
-            {
-              icon = ' ',
-              desc = 'Find Dotfiles',
-              key = 'f',
-              keymap = 'SPC f d',
-              key_format = ' %s', -- remove default surrounding `[]`
-              action = 'lua print(3)'
-            },
-        },
-        footer = {},
-      }
-    }
-    end,
-    requires = {'nvim-tree/nvim-web-devicons'}
+    'nvimdev/dashboard-nvim', requires = {'nvim-tree/nvim-web-devicons'}
   }
 -- ==================================
 
