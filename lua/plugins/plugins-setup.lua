@@ -77,6 +77,9 @@ return require('packer').startup(function(use)
 
   -- which-key
   use "folke/which-key.nvim"
+
+  -- nvim-terminal
+  use 's1n7ax/nvim-terminal'
 -- ==================================
 
   if packer_bootstrap then
