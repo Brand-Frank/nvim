@@ -64,26 +64,29 @@ return require('packer').startup(function(use)
 
 -- ==================================
   -- Debugger
-  use {
-    {
-      'mfussenegger/nvim-dap',
-      setup = [[require('config.dap_setup')]],
-      config = [[require('config.dap')]],
-      requires = 'jbyuki/one-small-step-for-vimkind',
-      wants = 'one-small-step-for-vimkind',
-      cmd = { 'BreakpointToggle', 'Debug', 'DapREPL' },
-    },
-    {
-      'rcarriga/nvim-dap-ui',
-      requires = 'nvim-dap',
-      wants = 'nvim-dap',
-      after = 'nvim-dap',
-      config = function()
-        require('dapui').setup()
-      end,
-    },
-  }
-  
+  use 'mfussenegger/nvim-dap'
+  use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap", "nvim-neotest/nvim-nio"} }
+  -- use {
+  --   {
+  --     'mfussenegger/nvim-dap',
+  --     setup = [[require('config.dap_setup')]],
+  --     config = [[require('config.dap')]],
+  --     requires = 'jbyuki/one-small-step-for-vimkind',
+  --     wants = 'one-small-step-for-vimkind',
+  --     cmd = { 'BreakpointToggle', 'Debug', 'DapREPL' },
+  --   },
+  --   {
+  --     'rcarriga/nvim-dap-ui',
+  --     requires = 'nvim-dap',
+  --     wants = 'nvim-dap',
+  --     after = 'nvim-dap',
+  --     config = function()
+  --       require('dapui').setup()
+  --     end,
+  --   },
+  -- }
+  --
+
 --   Linter静态代码分析工具
   use 'mfussenegger/nvim-lint'
 -- ==================================
