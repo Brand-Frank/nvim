@@ -104,6 +104,14 @@ _G.packer_plugins = {
     path = "C:\\Users\\inTree\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\cmp_luasnip",
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
+  ["dashboard-nvim"] = {
+    config = { "\27LJ\2\n�\3\0\0\6\0\f\0\0196\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\5\0005\4\4\0=\4\6\0034\4\3\0005\5\a\0>\5\1\0045\5\b\0>\5\2\4=\4\t\0034\4\0\0=\4\n\3=\3\v\2B\0\2\1K\0\1\0\vconfig\vfooter\vcenter\1\0\6\vaction\17lua print(3)\bkey\6f\tdesc\18Find Dotfiles\ticon\t \vkeymap\fSPC f d\15key_format\b %s\1\0\t\tdesc\14Find File\vaction\17lua print(2)\vkeymap\fSPC f f\15key_format\b %s\vkey_hl\vNumber\fdesc_hl\vString\bkey\6b\ficon_hl\nTitle\ticon\t \vheader\1\0\0\1\2\0\0\23this is dashboard.\1\0\1\ntheme\tdoom\nsetup\14dashboard\frequire\0" },
+    loaded = false,
+    needs_bufread = false,
+    only_cond = false,
+    path = "C:\\Users\\inTree\\AppData\\Local\\nvim-data\\site\\pack\\packer\\opt\\dashboard-nvim",
+    url = "https://github.com/nvimdev/dashboard-nvim"
+  },
   ["friendly-snippets"] = {
     loaded = true,
     path = "C:\\Users\\inTree\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\friendly-snippets",
@@ -213,6 +221,13 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
+vim.cmd [[augroup packer_load_aucmds]]
+vim.cmd [[au!]]
+  -- Event lazy-loads
+time([[Defining lazy-load event autocommands]], true)
+vim.cmd [[au VimEnter * ++once lua require("packer.load")({'dashboard-nvim'}, { event = "VimEnter *" }, _G.packer_plugins)]]
+time([[Defining lazy-load event autocommands]], false)
+vim.cmd("augroup END")
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then
