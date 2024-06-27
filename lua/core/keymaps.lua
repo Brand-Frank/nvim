@@ -34,6 +34,9 @@ keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>")
 -- Dashboard
 keymap.set("n", "<leader>d", ":Dashboard<CR>")
 
+-- WhichKey
+keymap.set("n", "<leader>w", ":WhichKey<CR>")
+
 -- nvim-dap & nvim-dap-ui
 keymap.set('n', '<F5>', function() require('dap').continue() end)
 keymap.set('n', '<F10>', function() require('dap').step_over() end)

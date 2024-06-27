@@ -74,6 +74,9 @@ return require('packer').startup(function(use)
   use {
     'nvimdev/dashboard-nvim', requires = {'nvim-tree/nvim-web-devicons'}
   }
+
+  -- which-key
+  use "folke/which-key.nvim"
 -- ==================================
 
   if packer_bootstrap then
