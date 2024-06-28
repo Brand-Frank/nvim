@@ -21,15 +21,15 @@ wk.register({
 })
 
 wk.register({
-  -- 注释掉的部分为快捷键对应的记录，但是因为不太确定是否影响现存的快捷键，所以统一只记录，不和按键绑定
-  ["<leader>d"] = { name = "+DAP"},
-  --   ["<F4>"] = { "<cmd>DapStepInto<cr>", "[DAP] step into" },
+--   注释掉的部分为快捷键对应的记录，但是因为不太确定是否影响现存的快捷键，所以统一只记录，不和按键绑定
+--   ["<leader>d"] = { name = "+DAP"},  -- <leader>d导致DAP信息与Dashboard冲突
+--   ["<F4>"] = { "<cmd>DapStepInto<cr>", "[DAP] step into" },
   ["<F4>"] = { "[DAP] step into" },
-  --   ["<F5>"] = { "<cmd>DapContinue<cr>", "[DAP] continue" },
+--   ["<F5>"] = { "<cmd>DapContinue<cr>", "[DAP] continue" },
   ["<F5>"] = { "[DAP] continue" },
-  --   ["<F10>"] = { "<cmd>DapStepOver<cr>", "[DAP] step over" },
+--   ["<F10>"] = { "<cmd>DapStepOver<cr>", "[DAP] step over" },
   ["<F10>"] = { "[DAP] step over" },
-  --   ["<F12>"] = { "<cmd>DapStepOut<cr>", "[DAP] step out" },
+--   ["<F12>"] = { "<cmd>DapStepOut<cr>", "[DAP] step out" },
   ["<F12>"] = { "[DAP] step out" },
 --   ["<leader>b"] = { "<cmd>DapToggleBreakpoint<cr>", "[DAP] toggle_breakpoint" },
   ["<leader>b"] = { "[DAP] toggle_breakpoint" },

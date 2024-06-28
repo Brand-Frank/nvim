@@ -34,3 +34,7 @@ opt.smartcase = true
 opt.termguicolors = true
 opt.signcolumn = "yes"
 vim.cmd[[colorscheme tokyonight-moon]]
+
+-- set shell = 'C:\Windows\System32\WindowsPowerShell\/v1.0\powershell.exe' -f
+-- set shell = 'C:/Windows/System32/WindowsPowerShell/v1.0/powershell.exe' -f
+-- let &shell = executable('pwsh') ? 'pwsh' : 'powershell'
