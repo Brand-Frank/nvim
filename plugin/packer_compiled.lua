@@ -139,6 +139,13 @@ _G.packer_plugins = {
     path = "C:\\Users\\inTree\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-autopairs",
     url = "https://github.com/windwp/nvim-autopairs"
   },
+  ["nvim-bqf"] = {
+    loaded = false,
+    needs_bufread = true,
+    only_cond = false,
+    path = "C:\\Users\\inTree\\AppData\\Local\\nvim-data\\site\\pack\\packer\\opt\\nvim-bqf",
+    url = "https://github.com/kevinhwang91/nvim-bqf"
+  },
   ["nvim-cmp"] = {
     loaded = true,
     path = "C:\\Users\\inTree\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-cmp",
@@ -168,6 +175,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "C:\\Users\\inTree\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-nio",
     url = "https://github.com/nvim-neotest/nvim-nio"
+  },
+  ["nvim-terminal"] = {
+    loaded = true,
+    path = "C:\\Users\\inTree\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-terminal",
+    url = "https://github.com/s1n7ax/nvim-terminal"
   },
   ["nvim-tree.lua"] = {
     loaded = true,
@@ -223,6 +235,13 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
+vim.cmd [[augroup packer_load_aucmds]]
+vim.cmd [[au!]]
+  -- Filetype lazy-loads
+time([[Defining lazy-load filetype autocommands]], true)
+vim.cmd [[au FileType qf ++once lua require("packer.load")({'nvim-bqf'}, { ft = "qf" }, _G.packer_plugins)]]
+time([[Defining lazy-load filetype autocommands]], false)
+vim.cmd("augroup END")
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then
