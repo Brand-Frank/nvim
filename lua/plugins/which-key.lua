@@ -10,7 +10,7 @@ require("which-key").setup ({
   },
 })
 
--- 记录和组织现存的按键映射
+-- WhichKey 记录和组织现存的按键映射
 local wk = require("which-key")
 wk.register({
   ["<leader>f"] = { name = "+Telescope" },   -- 组名, 按下<leader>f后, 状态栏显示的文字
@@ -20,6 +20,7 @@ wk.register({
   ["<leader>fh"] = { "<cmd>Telescope help_tags<cr>", "[Telescope] Help Tags" },
 })
 
+-- DAP / DAP-UI
 wk.register({
 --   注释掉的部分为快捷键对应的记录，但是因为不太确定是否影响现存的快捷键，所以统一只记录，不和按键绑定
 --   ["<leader>d"] = { name = "+DAP"},  -- <leader>d导致DAP信息与Dashboard冲突
@@ -45,6 +46,7 @@ wk.register({
   ["<leader>ds"] = { "[DAP] centered_float-scopes" },
 })
 
+-- Terminal
 wk.register({
   ["<leader>t"] = { name = "+Terminal[1-5] and Height/Width" },
   ["<leader>t1"] = { "Open terminal 1" },
@@ -62,4 +64,14 @@ wk.register({
   ["<leader>tw-"] = { "Decrease the window width" },
 
   ["<leader>;"] = { "Toggle open and close terminal window" },
+})
+
+-- Trouble
+wk.register({
+  ["<leader>xx"] = { "<cmd>Trouble diagnostics toggle<cr>", "Diagnostics (Trouble)" },
+  ["<leader>xX"] = { "<cmd>Trouble diagnostics toggle filter.buf=0<cr>", "Buffer Diagnostics (Trouble)" },
+  ["<leader>cs"] = { "<cmd>Trouble symbols toggle focus=false<cr>", "Symbols (Trouble)" },
+  ["<leader>cl"] = { "<cmd>Trouble lsp toggle focus=false win.position=right<cr>", "LSP Definitions / references / ... (Trouble)" },
+  ["<leader>xL"] = { "<cmd>Trouble loclist toggle<cr>", "Location List (Trouble)" },
+  ["<leader>xQ"] = { "<cmd>Trouble qflist toggle<cr>", "Quickfix List (Trouble)" },
 })

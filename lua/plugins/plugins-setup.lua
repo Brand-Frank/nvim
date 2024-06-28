@@ -98,9 +98,11 @@ return require('packer').startup(function(use)
 
   -- todo
   use {
-    'folke/todo-comments.nvim',
+    'folke/todo-comments.nvim',           -- todo高亮与搜索
     require = { 'nvim-lua/plenary.nvim' }
   }
+  -- trouble
+  use 'folke/trouble.nvim'                -- todo中的trouble高亮与搜索
 -- ==================================
 
   if packer_bootstrap then

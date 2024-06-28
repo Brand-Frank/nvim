@@ -49,12 +49,8 @@ keymap.set('n', '<Leader>lp', function() require('dap').set_breakpoint(nil, nil,
 keymap.set('n', '<Leader>dr', function() require('dap').repl.open() end)
 keymap.set('n', '<Leader>dl', function() require('dap').run_last() end)
 
-keymap.set({'n', 'v'}, '<Leader>dh', function()  -- <leader>dh
-  require('dap.ui.widgets').hover()
-end)
-keymap.set({'n', 'v'}, '<Leader>dp', function()  -- <leader>dp
-  require('dap.ui.widgets').preview()
-end)
+keymap.set({'n', 'v'}, '<Leader>dh', function() require('dap.ui.widgets').hover() end)    -- <leader>dh
+keymap.set({'n', 'v'}, '<Leader>dp', function() require('dap.ui.widgets').preview() end)  -- <leader>dp
 keymap.set('n', '<Leader>df', function()  -- <leader>df
   local widgets = require('dap.ui.widgets')
   widgets.centered_float(widgets.frames)
@@ -63,3 +59,11 @@ keymap.set('n', '<Leader>ds', function()  -- <leader>ds
   local widgets = require('dap.ui.widgets')
   widgets.centered_float(widgets.scopes)
 end)
+
+-- trouble.nvim
+keymap.set("n", "<leader>xx", "<cmd>Trouble diagnostics toggle<cr>")  -- Diagnostics (Trouble)
+keymap.set("n", "<leader>xX", "<cmd>Trouble diagnostics toggle filter.buf=0<cr>")  -- Buffer Diagnostics (Trouble)
+keymap.set("n", "<leader>cs", "<cmd>Trouble symbols toggle focus=false<cr>")  -- Symbols (Trouble)
+keymap.set("n", "<leader>cl", "<cmd>Trouble lsp toggle focus=false win.position=right<cr>")--LSP Definitions/references/..(Trouble)
+keymap.set("n", "<leader>xL", "<cmd>Trouble loclist toggle<cr>")  -- Location List (Trouble)
+keymap.set("n", "<leader>xQ", "<cmd>Trouble qflist toggle<cr>")   -- Quickfix List (Trouble)

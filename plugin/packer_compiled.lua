@@ -227,6 +227,11 @@ _G.packer_plugins = {
     path = "C:\\Users\\inTree\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\tokyonight.nvim",
     url = "https://github.com/folke/tokyonight.nvim"
   },
+  ["trouble.nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\inTree\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\trouble.nvim",
+    url = "https://github.com/folke/trouble.nvim"
+  },
   ["vim-tmux-navigator"] = {
     loaded = true,
     path = "C:\\Users\\inTree\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\vim-tmux-navigator",

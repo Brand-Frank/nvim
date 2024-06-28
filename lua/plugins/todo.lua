@@ -65,3 +65,9 @@ require('todo-comments').setup({
     },
   }
 })
+
+
+require('trouble').setup({
+--   cmd = "Trouble",
+})
+-- vim.cmd[[Trouble]]
