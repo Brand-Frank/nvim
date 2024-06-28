@@ -95,6 +95,12 @@ return require('packer').startup(function(use)
 
   -- qucikfix
   use {'kevinhwang91/nvim-bqf', ft = 'qf'}
+
+  -- todo
+  use {
+    'folke/todo-comments.nvim',
+    require = { 'nvim-lua/plenary.nvim' }
+  }
 -- ==================================
 
   if packer_bootstrap then
