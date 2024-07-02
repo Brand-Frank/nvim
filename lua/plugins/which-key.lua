@@ -22,22 +22,22 @@ wk.register({
 
 -- DAP / DAP-UI
 wk.register({
---   注释掉的部分为快捷键对应的记录，但是因为不太确定是否影响现存的快捷键，所以统一只记录，不和按键绑定
---   ["<leader>d"] = { name = "+DAP"},  -- <leader>d导致DAP信息与Dashboard冲突
---   ["<F4>"] = { "<cmd>DapStepInto<cr>", "[DAP] step into" },
+  -- 注释掉的部分为快捷键对应的记录，但是因为不太确定是否影响现存的快捷键，所以统一只记录，不和按键绑定
+  -- ["<leader>d"] = { name = "+DAP"},  -- <leader>d导致DAP信息与Dashboard冲突
+  -- ["<F4>"] = { "<cmd>DapStepInto<cr>", "[DAP] step into" },
   ["<F4>"] = { "[DAP] step into" },
---   ["<F5>"] = { "<cmd>DapContinue<cr>", "[DAP] continue" },
+  -- ["<F5>"] = { "<cmd>DapContinue<cr>", "[DAP] continue" },
   ["<F5>"] = { "[DAP] continue" },
---   ["<F10>"] = { "<cmd>DapStepOver<cr>", "[DAP] step over" },
+  -- ["<F10>"] = { "<cmd>DapStepOver<cr>", "[DAP] step over" },
   ["<F10>"] = { "[DAP] step over" },
---   ["<F12>"] = { "<cmd>DapStepOut<cr>", "[DAP] step out" },
+  -- ["<F12>"] = { "<cmd>DapStepOut<cr>", "[DAP] step out" },
   ["<F12>"] = { "[DAP] step out" },
---   ["<leader>b"] = { "<cmd>DapToggleBreakpoint<cr>", "[DAP] toggle_breakpoint" },
+  -- ["<leader>b"] = { "<cmd>DapToggleBreakpoint<cr>", "[DAP] toggle_breakpoint" },
   ["<leader>b"] = { "[DAP] toggle_breakpoint" },
   ["<leader>B"] = { "[DAP] set_breakpoint" },
   ["<leader>lp"] = { "[DAP] set_breakpoint(Log point message)" },
---   ["<leader>dr"] = { "function() require('dap').repl.open() end", "[DAP] repl.open" },
---   ["<leader>dl"] = { "function() require('dap').run_last() end", "[DAP] run_last" },
+  -- ["<leader>dr"] = { "function() require('dap').repl.open() end", "[DAP] repl.open" },
+  -- ["<leader>dl"] = { "function() require('dap').run_last() end", "[DAP] run_last" },
   ["<leader>dr"] = { "[DAP] repl.open" },
   ["<leader>dl"] = { "[DAP] run_last" },
   ["<leader>dh"] = { "[DAP] hover" },
@@ -71,7 +71,8 @@ wk.register({
   ["<leader>xx"] = { "<cmd>Trouble diagnostics toggle<cr>", "Diagnostics (Trouble)" },
   ["<leader>xX"] = { "<cmd>Trouble diagnostics toggle filter.buf=0<cr>", "Buffer Diagnostics (Trouble)" },
   ["<leader>cs"] = { "<cmd>Trouble symbols toggle focus=false<cr>", "Symbols (Trouble)" },
-  ["<leader>cl"] = { "<cmd>Trouble lsp toggle focus=false win.position=right<cr>", "LSP Definitions / references / ... (Trouble)" },
+  ["<leader>cl"] = { "<cmd>Trouble lsp toggle focus=false win.position=right<cr>", "LSP Definitions/references/... (Trouble)" },
   ["<leader>xL"] = { "<cmd>Trouble loclist toggle<cr>", "Location List (Trouble)" },
   ["<leader>xQ"] = { "<cmd>Trouble qflist toggle<cr>", "Quickfix List (Trouble)" },
 })
+
